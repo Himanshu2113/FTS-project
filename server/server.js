@@ -9,11 +9,13 @@ import jwt from "jsonwebtoken";
 // import session from "express-session";
 // import passport from "passport";
 const app = express();
+
 app.use(express.json());
 app.use(
   cors({
     origin: ["https://fts-wine.vercel.app"], // Replace with your Vercel frontend URL
     methods: ["GET,POST,PUT,DELETE"],
+    credentials: true,
   })
 );
 app.use(bodyParser.json());
