@@ -14,7 +14,7 @@ export default function SubmitThoughts() {
   const notifyA = (msg) => toast.error(msg);
   const notifyB = (msg) => toast.success(msg);
   useEffect(() => {
-    fetch("/api/submitt", {
+    fetch("https://fts-2avw.onrender.com/api/submitt", {
       // method: "POST",
       headers: {
         // "content-type": "application/json",

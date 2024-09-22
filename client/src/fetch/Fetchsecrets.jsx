@@ -7,7 +7,7 @@ const Fetch = () => {
   const [secretss, setSecrets] = useState([]);
   const notifyA = (msg) => toast.error(msg);
   useEffect(() => {
-    fetch("/api/s", {
+    fetch("https://fts-2avw.onrender.com/api/s", {
       method: "GET",
       headers: {
         "content-type": "application/json",

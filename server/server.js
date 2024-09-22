@@ -10,13 +10,17 @@ import jwt from "jsonwebtoken";
 // import passport from "passport";
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://fts-wine.vercel.app"], // Replace with your Vercel frontend URL
+    methods: ["GET,POST,PUT,DELETE"],
+  })
+);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 env.config();
 
 const uri = process.env.MONGODB_URI;
-
 
 const m = mongoose.connect(uri);
 var conn = mongoose.connection;

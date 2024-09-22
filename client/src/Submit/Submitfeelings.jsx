@@ -13,7 +13,7 @@ export default function SubmitFeelings() {
   const notifyA = (msg) => toast.error(msg);
   const notifyB = (msg) => toast.success(msg);
   useEffect(() => {
-    fetch("/api/submitf", {
+    fetch("https://fts-2avw.onrender.com/api/submitf", {
       headers: {
         token: localStorage.getItem("token"),
       },

@@ -8,7 +8,7 @@ const Fetch = () => {
   const notifyA = (msg) => toast.error(msg);
   // const notifyB = (msg) => toast.success(msg);
   useEffect(() => {
-    fetch("/api/t", {
+    fetch("https://fts-2avw.onrender.com/api/t", {
       method: "GET",
       headers: {
         "content-type": "application/json",

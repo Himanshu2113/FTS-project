@@ -7,7 +7,7 @@ const Fetch = () => {
   const [feelingss, setFeelings] = useState([]);
   const notifyA = (msg) => toast.error(msg);
   useEffect(() => {
-    fetch("/api/f", {
+    fetch("https://fts-2avw.onrender.com/api/f", {
       method: "GET",
       headers: {
         "content-type": "application/json",

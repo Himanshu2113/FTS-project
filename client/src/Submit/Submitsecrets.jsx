@@ -14,7 +14,7 @@ export default function SubmitSecrets() {
   const notifyB = (msg) => toast.success(msg);
 
   useEffect(() => {
-    fetch("/api/submits", {
+    fetch("https://fts-2avw.onrender.com/api/submits", {
       headers: {
         token: localStorage.getItem("token"),
       },

@@ -58,7 +58,7 @@ export default function Register() {
       headers: { "content-type": "application/json" },
       body: serializedBody,
     };
-    fetch("http://localhost:3000/api/register", fetchOptions)
+    fetch("https://fts-2avw.onrender.com/api/register", fetchOptions)
       .then((res) => res.json())
       .then((data) => {
         if (data.error) {
