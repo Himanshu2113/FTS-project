@@ -68,7 +68,7 @@ function Login() {
           notifyB(data.message);
           navigate("/home");
         }
-        console.log(data);
+        // console.log(data);
       });
   };
   // export { Token };
