@@ -50,7 +50,7 @@ export default function SubmitSecrets() {
       },
       body: serializedBody,
     };
-    fetch("http://localhost:3000/api/submits", fetchOptions)
+    fetch("https://fts-2avw.onrender.com/api/submits", fetchOptions)
       .then((res) => res.json())
       .then((data) => {
         if (data.error) {
@@ -66,7 +66,11 @@ export default function SubmitSecrets() {
   return (
     <div className="submit-div container">
       <Navbar />
-      <form onSubmit={saveSecret} method="post" action="/api/submits">
+      <form
+        onSubmit={saveSecret}
+        method="post"
+        action="https://fts-2avw.onrender.com/api/submits"
+      >
         <textarea
           name="secrets"
           onChange={handleSecret}

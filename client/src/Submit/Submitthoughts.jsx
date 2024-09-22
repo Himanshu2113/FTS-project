@@ -56,7 +56,7 @@ export default function SubmitThoughts() {
       },
       body: serializedBody,
     };
-    fetch("http://localhost:3000/api/submitt", fetchOptions)
+    fetch("https://fts-2avw.onrender.com/api/submitt", fetchOptions)
       .then((res) => res.json())
       .then((data) => {
         if (data.error) {
@@ -72,7 +72,11 @@ export default function SubmitThoughts() {
   return (
     <div className="submit-div container">
       <Navbar />
-      <form onSubmit={saveThought} method="post" action="/api/submitt">
+      <form
+        onSubmit={saveThought}
+        method="post"
+        action="https://fts-2avw.onrender.com/api/submitt"
+      >
         <textarea
           name="thoughts"
           onChange={handleThought}

@@ -53,7 +53,7 @@ export default function SubmitFeelings() {
       },
       body: serializedBody,
     };
-    fetch("http://localhost:3000/api/submitf", fetchOptions)
+    fetch("https://fts-2avw.onrender.com/api/submitf", fetchOptions)
       .then((res) => res.json())
       .then((data) => {
         if (data.error) {
@@ -70,7 +70,11 @@ export default function SubmitFeelings() {
     <div>
       <div className="container">
         <Navbar />
-        <form onSubmit={saveFeeling} method="post" action="/api/submitf">
+        <form
+          onSubmit={saveFeeling}
+          method="post"
+          action="https://fts-2avw.onrender.com/api/submitf"
+        >
           <textarea
             name="feelings"
             onChange={handleFeeling}
