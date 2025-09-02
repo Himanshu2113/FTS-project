@@ -13,7 +13,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: ["https://fts-wine.vercel.app"], // Replace with your Vercel frontend URL
+    origin: ["http://localhost:3000"], // Replace with your Vercel frontend URL
     methods: ["GET,POST,PUT,DELETE"],
     credentials: true,
   })
