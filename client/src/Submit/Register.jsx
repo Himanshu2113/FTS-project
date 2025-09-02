@@ -47,7 +47,7 @@ export default function Register() {
       return;
     } else if (!passRegex.test(user.password)) {
       notifyA(
-        "Password must include atleast 8 characters in which there should be 2 uppercase letters, 3 lowercase letters, 2 numbers, and 1 special characters"
+        "Password must include atleast 8 characters in which there should be 1 uppercase letters, 2 lowercase letters, 2 numbers, and 1 special characters"
       );
       return;
     }
